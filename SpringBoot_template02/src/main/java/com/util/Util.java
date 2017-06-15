@@ -29,6 +29,7 @@ import java.util.regex.Pattern;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;
@@ -39,6 +40,7 @@ import com.google.gson.Gson;
 import com.google.gson.JsonNull;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import com.spring.SpringContextHolder;
 
 
 @Component
@@ -71,7 +73,6 @@ public class Util {
 	public Util(Gson aGson, VersionBean versionBean){
 		Util.getFileLogger().info("Util() start");
 		Util.gson = aGson;
-		
 		// 寫入version
 		Util.getFileLogger().info("Util - " + versionBean.getProjectName() + " version: " + versionBean.getVersion());
 		Util.getFileLogger().info("Util() end");
