@@ -47,17 +47,6 @@ import com.google.gson.JsonParser;
 @ConfigurationProperties
 public class Util {
 	
-	@Value("${version}")
-	private String version;
-	
-	public String getVersion() {
-		return version;
-	}
-
-	public void setVersion(String version) {
-		this.version = version;
-	}
-
 	public static Gson getGson() {
 		return gson;
 	}
