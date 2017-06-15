@@ -15,7 +15,6 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import com.bean.VersionBean;
 import com.google.gson.Gson;
-import com.util.Util;
 
 @Configuration
 @EnableMBeanExport(defaultDomain="${projectName}")
@@ -50,14 +49,12 @@ public class BeanGenerator {
 	
 	
 	/**
-	 * StartListener called when this application is started
-	 * It depends on another bean, SpringContextHolder, to funciton normally
+	 * ApplicationListenerBean starts 
 	 * @return
 	 */
-	@Bean
-	@DependsOn("SpringContextHolder")
-	public StartListener startListener() {
-	   return new StartListener();
-	}	
+	@Bean 
+	public com.bean.ApplicationListenerBean ApplicationListenerBean(){
+		return new com.bean.ApplicationListenerBean();
+	}
 	
 }
