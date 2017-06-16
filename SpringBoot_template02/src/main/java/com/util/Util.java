@@ -4,6 +4,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 import java.util.AbstractMap;
 import java.util.Base64;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -42,32 +43,8 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.spring.SpringContextHolder;
 
-
-@Component
-//@PropertySource("classpath:config.properties")
-@PropertySource("classpath:application.properties")
-@ConfigurationProperties
 public class Util {
 	
-	@Value("${version}")
-	private String version;
-	
-	public String getVersion() {
-		return version;
-	}
-
-	public void setVersion(String version) {
-		this.version = version;
-	}
-
-	public static Gson getGson() {
-		return gson;
-	}
-
-	public static void setGson(Gson gson) {
-		Util.gson = gson;
-	}
-
 	private static Gson gson;
 	
 	public Util(Gson aGson, VersionBean versionBean){
@@ -114,12 +91,18 @@ public class Util {
 	public static Logger getPressureTestFileLogger(){
 		return Attr.pressureTestFileLogger;
 	}
+	public static Gson getGson() {
+		return gson;
+	}
+	public static void setGson(Gson gson) {
+		Util.gson = gson;
+	}
 
 	private static class Attr {
 		private static final String sdfDateFormat = "yyyy-MM-dd";
 		private static final String sdfTimeFormat = "HH:mm:ss";
 		private static final String sdfDateTimeFormat = "yyyy-MM-dd HH:mm:ss";
-		private static Map<String,String> SystemParam = null;
+		private static Map<String,String> SystemParam = new HashMap<>();
 		private static final Logger fileLogger = LogManager.getLogger("util.fileLogger");
 		private static final Logger consoleLogger = LogManager.getLogger("util.consoleLogger");
 		private static final Logger statusFileLogger = LogManager.getLogger("util.statusFileLogger");
