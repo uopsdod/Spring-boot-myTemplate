@@ -95,3 +95,15 @@
 [17/06/15 21:39:49.548][ INFO][com.bean.ApplicationListenerBean   -16   ] - ContextRefreshedEvent start ###################
 [17/06/15 21:39:49.549][ INFO][com.bean.ApplicationListenerBean   -19   ] - ContextRefreshedEvent end ###################
 >>>>>>> branch 'master' of https://github.com/uopsdod/Spring-boot-myTemplate.git
+[17/07/07 13:37:36.035][ INFO][com.util.Util                      -51   ] - Util() start
+[17/07/07 13:37:36.042][ INFO][com.util.Util                      -54   ] - Util - YourProjectName version: v1.0.0
+[17/07/07 13:37:36.042][ INFO][com.util.Util                      -55   ] - Util() end
+[17/07/07 13:37:36.775][ INFO][com.bean.ApplicationListenerBean   -17   ] - ContextRefreshedEvent start ###################
+[17/07/07 13:37:36.776][ INFO][com.bean.ApplicationListenerBean   -20   ] - ContextRefreshedEvent end ###################
+[17/07/07 13:37:36.866][ INFO][com.bean.ApplicationListenerBean   -25   ] - ContextClosedEvent start ###################
+[17/07/07 13:37:36.867][ INFO][com.bean.ApplicationListenerBean   -28   ] - ContextClosedEvent end ###################
+[17/07/07 13:38:32.086][ INFO][com.util.Util                      -51   ] - Util() start
+[17/07/07 13:38:32.090][ INFO][com.util.Util                      -54   ] - Util - YourProjectName version: v1.0.0
+[17/07/07 13:38:32.090][ INFO][com.util.Util                      -55   ] - Util() end
+[17/07/07 13:38:32.958][ INFO][com.bean.ApplicationListenerBean   -17   ] - ContextRefreshedEvent start ###################
+[17/07/07 13:38:32.960][ INFO][com.bean.ApplicationListenerBean   -20   ] - ContextRefreshedEvent end ###################
